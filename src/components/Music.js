@@ -9,11 +9,13 @@ class Music extends Component{
             this.state={
                 Music:[],
                 input:''
+                 
             }
             this.handleChange=this.handleChange.bind(this)
             this.addMusic=this.addMusic.bind(this)
             this.deleteMusic=this.deleteMusic.bind(this)
             this.updateMusic=this.updateMusic.bind(this)
+            
         }
 
         componentDidMount(){
@@ -41,14 +43,9 @@ class Music extends Component{
              this.setState({Music})
          }
 
-         /*
-         updateMusic(title,id){
-            axios.put(`/api/music/${id}`,{title}).then(results=>{
-                this.setState({Music:results.data})
-            })
-         }
-         */
+
     
+
     
     
     
@@ -70,8 +67,8 @@ class Music extends Component{
                  <Header/>
             <div>
                <form onSubmit={this.addMusic}>
-               <input value={this.state.input} placeholder='Add Songs To Favorites' type='text' onChange={this.handleChange}/>
-               <button>Add</button>
+               <input value={this.state.input} placeholder='Add Songs To Favorites' type='text' onChange={this.handleChange} style={{padding:'1%'}}/>
+               <button style={{marginLeft:'1%',background:'white',padding:'10px'}}> Add</button>
                </form>
               </div>
                 {Music}

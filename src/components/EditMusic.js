@@ -47,8 +47,8 @@ class EditMusic extends Component{
                     ):
                     (
                     <div>
-                      <p>{this.props.MusicE.name}</p>
-                      <button onClick={this.showEdit}>Edit</button>
+                      <p style={{border:'solid'}}>{this.props.MusicE.name}</p>
+                      <button  onClick={this.showEdit} style={{marginRight:'1%'}}>Edit</button>
                       <button onClick={()=>this.props.deleteMusic(this.props.MusicE.id)}>Delete</button>
                    </div>
                     )

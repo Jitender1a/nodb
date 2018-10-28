@@ -1,5 +1,14 @@
+Body{
+  background: rgba(216, 231, 227, 0.288);
+  
+}
+
 .App {
   text-align: center;
+  border: solid black;
+  margin: 10%;
+  background: linear-gradient(45deg, red, blue);
+  color: white;
 }
 
 .App-logo {
@@ -15,7 +24,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -30,3 +39,4 @@
     transform: rotate(360deg);
   }
 }
+
