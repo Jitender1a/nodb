@@ -1,14 +1,14 @@
 Body{
-  background: rgba(216, 231, 227, 0.288);
-  
+  background-image: url(img/wallpaper-2030354.jpg);
+  background-repeat: no-repeat,repeat;
+  background-size: cover;
 }
 
 .App {
   text-align: center;
-  border: solid black;
   margin: 10%;
-  background: linear-gradient(45deg, red, blue);
-  color: white;
+  color: red;
+  
 }
 
 .App-logo {

@@ -8,8 +8,8 @@ class Api extends Component{
             moreMusic:[]
         }
     }
-
-    componentDidMount(){
+ 
+    componentDidMount(){ // Eminems Music
         axios.get('http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=eminem&api_key=b0feab1f66d5c38fde86a2ce31f31ef4&format=json').then(results=>{
             var ten=results.data.results.artistmatches.artist
             var item=ten.splice(0,10)
