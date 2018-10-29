@@ -3,6 +3,7 @@ import Header from './Header'
 import axios from 'axios'
 import EditMusic from './EditMusic'
 
+
 class Music extends Component{
         constructor(){
             super()
@@ -59,6 +60,7 @@ class Music extends Component{
                     MusicE={MusicE}
                     deleteMusic={this.deleteMusic}
                     updateMusic={this.updateMusic}/>
+
                 )
             })
         
