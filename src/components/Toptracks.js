@@ -11,8 +11,13 @@ class Toptracks extends Component{
 
     componentDidMount(){
         axios.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=b0feab1f66d5c38fde86a2ce31f31ef4&format=json').then(results=>{
-            //console.log(12,results);    
-        this.setState({moreMusic:results.data.tracks.track});
+            var ten=results.data.tracks.track
+            var item=ten.splice(0,10);
+            this.setState({
+                moreMusic:item
+            })
+        //console.log(12,results);    
+        /*this.setState({moreMusic:results.data.tracks.track});*/
         });
     }
 

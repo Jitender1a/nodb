@@ -11,8 +11,13 @@ class Artist extends Component{
 
     componentDidMount(){
         axios.get('http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=Migos&api_key=b0feab1f66d5c38fde86a2ce31f31ef4&format=json').then(results=>{
-            //console.log(11,results);    
-        this.setState({moreMusic:results.data.results.artistmatches.artist});
+            var ten=results.data.results.artistmatches.artist
+            var item=ten.splice(0,10)
+            this.setState({
+                moreMusic:item
+            })
+        //console.log(11,results);    
+        /*this.setState({moreMusic:results.data.results.artistmatches.artist});*/
         });
     }
 
