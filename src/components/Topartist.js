@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-class Api extends Component{
+class Topartist extends Component{
     constructor(){
         super();
         this.state={
@@ -10,9 +10,9 @@ class Api extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=eminem&api_key=b0feab1f66d5c38fde86a2ce31f31ef4&format=json').then(results=>{
-            console.log(11,results);    
-        this.setState({moreMusic:results.data.results.artistmatches.artist});
+        axios.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=b0feab1f66d5c38fde86a2ce31f31ef4&format=json').then(results=>{
+            //console.log(12,results);    
+        this.setState({moreMusic:results.data.artists.artist});
         });
     }
 
@@ -20,7 +20,7 @@ class Api extends Component{
     render(){
        // console.log(this.state.moreMusic)
         return(
-        <div> <h1 style={{margin:'-7%'}}>Artist: Eminem</h1>
+        <div> <h1 style={{margin:'-7%'}}>Top Artists</h1>
             <div div style={{border:'solid', margin:'10%'}}>
                 {
                 this.state.moreMusic.map(track =>{ 
@@ -38,4 +38,4 @@ class Api extends Component{
     }
     
 }
-export default Api
+export default Topartist
